@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sisi's Place – Bentota, Sri Lanka</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-logo"><span>Sisi's</span> Place</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#rooms">Rooms</a></li>
+    <li><a href="#amenities">Amenities</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#dining">Dining</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#location">Location</a></li>
+    <li><a href="#booking" class="nav-book">Book Now</a></li>
+  </ul>
+  <div class="hamburger" onclick="openMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <span class="mobile-close" onclick="closeMenu()">✕</span>
+  <a href="#about" onclick="closeMenu()">About</a>
+  <a href="#rooms" onclick="closeMenu()">Rooms</a>
+  <a href="#amenities" onclick="closeMenu()">Amenities</a>
+  <a href="#gallery" onclick="closeMenu()">Gallery</a>
+  <a href="#dining" onclick="closeMenu()">Dining</a>
+  <a href="#reviews" onclick="closeMenu()">Reviews</a>
+  <a href="#location" onclick="closeMenu()">Location</a>
+  <a href="#booking" onclick="closeMenu()">Book Now</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-badge">⭐ Rated 9.9 · Bentota, Sri Lanka</div>
+    <h1 class="hero-title"><em>Sisi's</em> Place</h1>
+    <p class="hero-sub">Beachfront Boutique Hotel · Bentota · Sri Lanka</p>
+    <div class="hero-ctas">
+      <a href="#booking" class="btn-primary">Reserve Your Stay</a>
+      <a href="#rooms" class="btn-outline">Explore Rooms</a>
+    </div>
+  </div>
+  <div class="hero-scroll">Scroll</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-inner">
+    <div class="about-text reveal">
+      <p class="section-label">Our Story</p>
+      <h2 class="section-title">Where the Ocean <em>Meets</em> Family Warmth</h2>
+      <p>Nestled right on the shores of Bentota Beach, Sisi's Place is a family-run boutique retreat that offers something rare — the genuine warmth of a home combined with the comfort of a top-rated hotel. Your host, Sisi, and his family treat every guest like a personal friend.</p>
+      <p>Wake up to the sound of waves, enjoy a freshly made breakfast with tropical fruits, and let our family help you discover the best of southern Sri Lanka — from hidden beaches to ancient temples. With a rating of 9.9 and 5-star reviews, we pride ourselves on going above and beyond.</p>
+      <div class="about-stats">
+        <div class="stat-box">
+          <div class="stat-num">9.9</div>
+          <div class="stat-lbl">Guest Rating</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">★5</div>
+          <div class="stat-lbl">TripAdvisor</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">3★</div>
+          <div class="stat-lbl">Star Hotel</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">100%</div>
+          <div class="stat-lbl">Beach View</div>
+        </div>
+      </div>
+    </div>
+    <div class="about-img-wrap reveal">
+      <img class="about-img" src="images/about_hotel_1780752835645.png" alt="Hotel exterior">
+      <div class="about-img-accent"></div>
+      <div class="about-badge-img"><strong>🏖️</strong><span>Private Beach</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ROOMS -->
+<section id="rooms">
+  <div class="rooms-inner">
+    <div class="rooms-header reveal">
+      <p class="section-label">Accommodation</p>
+      <h2 class="section-title">Our <em>Rooms</em></h2>
+    </div>
+    <div class="rooms-grid">
+      <div class="room-card reveal">
+        <div class="room-img">
+          <img src="images/room_king_1780752849537.png" alt="King Sea View Room">
+          <span class="room-badge">Most Popular</span>
+        </div>
+        <div class="room-body">
+          <div class="room-name">King Sea View Suite</div>
+          <p class="room-desc">Spacious king room directly facing the Indian Ocean. Modern interiors, private balcony with panoramic sea views, and a luxurious private bathroom.</p>
+          <div class="room-features">
+            <span class="feature-tag">🌊 Sea View</span>
+            <span class="feature-tag">🌬 AC</span>
+            <span class="feature-tag">🛁 Private Bath</span>
+            <span class="feature-tag">🏖 Balcony</span>
+          </div>
+          <div class="room-footer">
+            <div class="room-price">Per night from<strong>$65</strong></div>
+            <a href="#booking" class="btn-sm">Book</a>
+          </div>
+        </div>
+      </div>
+      <div class="room-card reveal">
+        <div class="room-img">
+          <img src="images/room_garden_1780752868022.png" alt="Double Garden Room">
+          <span class="room-badge">Great Value</span>
+        </div>
+        <div class="room-body">
+          <div class="room-name">Double Garden Room</div>
+          <p class="room-desc">Comfortable double room with garden views and all modern amenities. Perfect for couples seeking a peaceful tropical retreat.</p>
+          <div class="room-features">
+            <span class="feature-tag">🌿 Garden View</span>
+            <span class="feature-tag">🌬 AC</span>
+            <span class="feature-tag">🛁 Private Bath</span>
+            <span class="feature-tag">💻 Desk</span>
+          </div>
+          <div class="room-footer">
+            <div class="room-price">Per night from<strong>$45</strong></div>
+            <a href="#booking" class="btn-sm">Book</a>
+          </div>
+        </div>
+      </div>
+      <div class="room-card reveal">
+        <div class="room-img">
+          <img src="images/room_family_1780752880621.png" alt="Family Room">
+        </div>
+        <div class="room-body">
+          <div class="room-name">Family Beachfront Room</div>
+          <p class="room-desc">Generous family room with direct beach access. Accommodates up to 4 guests comfortably with extra beds available on request.</p>
+          <div class="room-features">
+            <span class="feature-tag">🌊 Beach Access</span>
+            <span class="feature-tag">👨‍👩‍👧 4 Guests</span>
+            <span class="feature-tag">🌬 AC</span>
+            <span class="feature-tag">🏖 Balcony</span>
+          </div>
+          <div class="room-footer">
+            <div class="room-price">Per night from<strong>$85</strong></div>
+            <a href="#booking" class="btn-sm">Book</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AMENITIES -->
+<section id="amenities">
+  <div class="amenities-inner">
+    <div class="amenities-header reveal">
+      <p class="section-label">What We Offer</p>
+      <h2 class="section-title">Hotel <em>Amenities</em></h2>
+    </div>
+    <div class="amenities-grid">
+      <div class="amenity-item reveal">
+        <div class="amenity-icon">🏖️</div>
+        <div class="amenity-name">Private Beach</div>
+        <div class="amenity-desc">Exclusive beach access right at your doorstep</div>
+      </div>
+      <div class="amenity-item reveal">
+        <div class="amenity-icon">🌿</div>
+        <div class="amenity-name">Garden Terrace</div>
+        <div class="amenity-desc">Lush tropical garden for relaxation</div>
+      </div>
+      <div class="amenity-item reveal">
+        <div class="amenity-icon">📶</div>
+        <div class="amenity-name">Free WiFi</div>
+        <div class="amenity-desc">High-speed internet throughout property</div>
+      </div>
+      <div class="amenity-item reveal">
+        <div class="amenity-icon">🚗</div>
+        <div class="amenity-name">Airport Transfer</div>
+        <div class="amenity-desc">Hassle-free pickup from Colombo airport</div>
+      </div>
+      <div class="amenity-item reveal">
+        <div class="amenity-icon">🛎️</div>
+        <div class="amenity-name">24h Front Desk</div>
+        <div class="amenity-desc">Always here when you need us</div>
+      </div>
+      <div class="amenity-item reveal">
+        <div class="amenity-icon">🍳</div>
+        <div class="amenity-name">Breakfast Included</div>
+        <div class="amenity-desc">Fresh tropical breakfast every morning</div>
+      </div>
+      <div class="amenity-item reveal">
+        <div class="amenity-icon">🚲</div>
+        <div class="amenity-name">Bike Rental</div>
+        <div class="amenity-desc">Explore Bentota on two wheels</div>
+      </div>
+      <div class="amenity-item reveal">
+        <div class="amenity-icon">🛺</div>
+        <div class="amenity-name">Tuk-Tuk Tours</div>
+        <div class="amenity-desc">Sisi takes you on local adventures</div>
+      </div>
+      <div class="amenity-item reveal">
+        <div class="amenity-icon">🌊</div>
+        <div class="amenity-name">Snorkelling</div>
+        <div class="amenity-desc">Discover Bentota's underwater world</div>
+      </div>
+      <div class="amenity-item reveal">
+        <div class="amenity-icon">🍽️</div>
+        <div class="amenity-name">Room Service</div>
+        <div class="amenity-desc">Meals delivered to your room</div>
+      </div>
+      <div class="amenity-item reveal">
+        <div class="amenity-icon">❄️</div>
+        <div class="amenity-name">Air Conditioning</div>
+        <div class="amenity-desc">All rooms fully air-conditioned</div>
+      </div>
+      <div class="amenity-item reveal">
+        <div class="amenity-icon">🧳</div>
+        <div class="amenity-name">Luggage Storage</div>
+        <div class="amenity-desc">Secure storage for early/late stays</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="gallery-inner">
+    <div class="gallery-header reveal">
+      <p class="section-label" style="color:var(--gold)">Visual Journey</p>
+      <h2 class="section-title">Gallery</h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item" onclick="openLightbox(0)">
+        <img src="images/gallery_1_1780752892800.png" alt="Bentota Beach">
+        <div class="gallery-overlay"><span>🔍</span></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(1)">
+        <img src="images/gallery_2_1780752910536.png" alt="Hotel exterior">
+        <div class="gallery-overlay"><span>🔍</span></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(2)">
+        <img src="images/gallery_3_1780752921994.png" alt="King Room">
+        <div class="gallery-overlay"><span>🔍</span></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(3)">
+        <img src="images/gallery_4_1780752934681.png" alt="Breakfast">
+        <div class="gallery-overlay"><span>🔍</span></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(4)">
+        <img src="images/about_hotel_1780752835645.png" alt="Terrace">
+        <div class="gallery-overlay"><span>🔍</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <span class="lb-close" onclick="closeLightbox()">✕</span>
+  <span class="lb-prev" onclick="lbNav(-1)">‹</span>
+  <img id="lb-img" src="" alt="">
+  <span class="lb-next" onclick="lbNav(1)">›</span>
+</div>
+
+<!-- DINING -->
+<section id="dining">
+  <div class="dining-inner">
+    <div class="dining-img-wrap reveal">
+      <img class="dining-img" src="images/dining_breakfast_1780752952332.png" alt="Breakfast spread">
+      <div class="dining-card">
+        <div class="dining-card-icon">☀️</div>
+        <div class="dining-card-title">Daily Breakfast</div>
+        <div class="dining-card-sub">Included with every stay</div>
+      </div>
+    </div>
+    <div class="dining-text reveal">
+      <p class="section-label">Food & Drink</p>
+      <h2 class="section-title">A Taste of <em>Sri Lanka</em></h2>
+      <div class="menu-item">
+        <div class="menu-icon">🥭</div>
+        <div>
+          <div class="menu-item-name">Tropical Fruit Platter</div>
+          <div class="menu-item-desc">Fresh mango, papaya, pineapple and seasonal local fruits — picked daily</div>
+        </div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-icon">🥚</div>
+        <div>
+          <div class="menu-item-name">Made-to-Order Omelette</div>
+          <div class="menu-item-desc">Freshly prepared to your liking with local herbs, cheese, and vegetables</div>
+        </div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-icon">🥤</div>
+        <div>
+          <div class="menu-item-name">Fresh Tropical Juice</div>
+          <div class="menu-item-desc">Squeezed to order — mango, passion fruit, watermelon, and more</div>
+        </div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-icon">🍛</div>
+        <div>
+          <div class="menu-item-name">Sri Lankan Surprise</div>
+          <div class="menu-item-desc">A daily homemade local dish — hoppers, string hoppers, or pol sambol</div>
+        </div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-icon">🍞</div>
+        <div>
+          <div class="menu-item-name">Continental Selection</div>
+          <div class="menu-item-desc">Toast, jam, cereals and yoghurt for a lighter morning start</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="reviews-inner">
+    <div class="reviews-header reveal">
+      <p class="section-label">Guest Voices</p>
+      <h2 class="section-title">What Our <em>Guests</em> Say</h2>
+      <div class="rating-display">
+        <div class="big-rating">9.9</div>
+        <div>
+          <div class="stars">★★★★★</div>
+          <div class="rating-source">Booking.com · TripAdvisor</div>
+        </div>
+      </div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card reveal">
+        <div class="review-quote">"</div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">We extended our stay from 2 nights to 6 nights. Sisi took us around in his tuk-tuk, arranged trips — nothing was too much trouble. Breakfast was unbelievable every single morning.</p>
+        <div class="review-author">Sarah & James</div>
+        <div class="review-origin">🇬🇧 United Kingdom</div>
+      </div>
+      <div class="review-card reveal">
+        <div class="review-quote">"</div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">The rooms were super clean and spacious. The beach is right in front and a railway track next to the property — perfect location! Hospitality was outstanding, breakfast was delicious.</p>
+        <div class="review-author">Priya & Raj</div>
+        <div class="review-origin">🇮🇳 India</div>
+      </div>
+      <div class="review-card reveal">
+        <div class="review-quote">"</div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">A superb place! The family is incredibly welcoming. The shower was the best I had in all of Sri Lanka. Very clean, spacious room and an exceptional breakfast each day.</p>
+        <div class="review-author">Hans & Marta</div>
+        <div class="review-origin">🇩🇪 Germany</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section id="location">
+  <div class="location-inner">
+    <div class="location-text reveal">
+      <p class="section-label">Find Us</p>
+      <h2 class="section-title">Prime <em>Bentota</em> Location</h2>
+      <p>Sisi's Place sits at the perfect spot where the Indian Ocean meets the golden sands of Bentota Beach. We're easily reachable and perfectly positioned for exploring southern Sri Lanka.</p>
+      <ul class="location-list">
+        <li><span class="icon">🏖️</span><div><strong>Bentota Beach</strong> — 3 min walk</div></li>
+        <li><span class="icon">🚂</span><div><strong>Bentota Railway Station</strong> — 5 min walk</div></li>
+        <li><span class="icon">🏛️</span><div><strong>Aluthgama Railway Station</strong> — 1.1 miles</div></li>
+        <li><span class="icon">🛕</span><div><strong>Kande Viharaya Temple</strong> — 2.5 miles</div></li>
+        <li><span class="icon">🌊</span><div><strong>Bentota Lake</strong> — 10 min drive</div></li>
+        <li><span class="icon">✈️</span><div><strong>Bandaranaike Airport</strong> — ~90 min drive</div></li>
+      </ul>
+    </div>
+    <a class="map-placeholder reveal" href="https://maps.app.goo.gl/Jk33K73JJEqZggLM7" target="_blank">
+      <div class="map-icon">📍</div>
+      <strong>Sisi's Place, Bentota</strong>
+      <p>6°25'16.6"N 79°59'49.0"E</p>
+      <p style="margin-top:.5rem; font-size:.8rem; opacity:.6;">Click to open in Google Maps</p>
+    </a>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section id="booking">
+  <div class="booking-inner">
+    <p class="section-label" style="text-align:center">Reserve Your Stay</p>
+    <h2 class="section-title">Book <em>Direct</em> & Save</h2>
+    <p>Get the best rates when you book directly with us. No hidden fees, free cancellation available.</p>
+    <div class="booking-form reveal">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Check-in Date</label>
+          <input type="date" id="checkin" min="">
+        </div>
+        <div class="form-group">
+          <label>Check-out Date</label>
+          <input type="date" id="checkout" min="">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Room Type</label>
+          <select id="roomType">
+            <option value="">Select a room...</option>
+            <option value="sea-view">King Sea View Suite — from $65/night</option>
+            <option value="garden">Double Garden Room — from $45/night</option>
+            <option value="family">Family Beachfront Room — from $85/night</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Guests</label>
+          <select id="guests">
+            <option value="1">1 Guest</option>
+            <option value="2" selected>2 Guests</option>
+            <option value="3">3 Guests</option>
+            <option value="4">4 Guests</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" id="guestName" placeholder="Your full name">
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" id="guestEmail" placeholder="you@email.com">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Special Requests (optional)</label>
+        <input type="text" id="requests" placeholder="Airport transfer, dietary needs, early check-in...">
+      </div>
+      <div id="pricePreview" style="margin-top:1.5rem; padding:1rem; background:var(--sand); display:none; font-size:.9rem; color:var(--ocean); text-align:center; font-weight:500;"></div>
+      <div class="form-submit">
+        <button class="btn-primary" onclick="submitBooking()">Confirm Reservation</button>
+      </div>
+      <p class="booking-note">💳 Cash only · ✓ Free cancellation 48h before arrival · ✓ Best rate guaranteed</p>
+      <div class="success-msg" id="successMsg">
+        ✅ Thank you! Your reservation request has been received. Sisi will personally contact you within 24 hours to confirm your booking.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / FOOTER -->
+<footer id="contact">
+  <div class="contact-inner">
+    <div class="contact-brand">
+      <span class="nav-logo"><span>Sisi's</span> Place</span>
+      <p>A family-run beachfront boutique hotel on the golden shores of Bentota, Sri Lanka. Rated 9.9 by guests worldwide for warmth, comfort and the best breakfast in the south.</p>
+    </div>
+    <div>
+      <div class="contact-heading">Contact Us</div>
+      <ul class="contact-info">
+        <li>📍 Bentota, Galle District, Southern Province, Sri Lanka</li>
+        <li>📧 reservations@sisisplace.lk</li>
+        <li>📞 +94 77 XXX XXXX</li>
+        <li>🕐 Check-in: 2:00 PM · Check-out: 12:00 PM</li>
+      </ul>
+    </div>
+    <div>
+      <div class="contact-heading">Quick Links</div>
+      <ul class="contact-links">
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#rooms">Rooms & Rates</a></li>
+        <li><a href="#amenities">Amenities</a></li>
+        <li><a href="#dining">Dining</a></li>
+        <li><a href="#reviews">Guest Reviews</a></li>
+        <li><a href="#booking">Book Direct</a></li>
+        <li><a href="https://maps.app.goo.gl/Jk33K73JJEqZggLM7" target="_blank">Find on Maps</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="contact-bottom" style="padding:0 1.5rem;">
+    <span>© 2025 Sisi's Place, Bentota · All Rights Reserved</span>
+    <div class="social-links">
+      <a href="#" title="Facebook">📘</a>
+      <a href="#" title="Instagram">📸</a>
+      <a href="#" title="TripAdvisor">🌐</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
