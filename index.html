@@ -8,6 +8,8 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="cursor-dot"></div>
+<div class="cursor-outline"></div>
 
 <!-- NAV -->
 <nav id="navbar">
@@ -43,6 +45,7 @@
 <!-- HERO -->
 <section id="hero">
   <div class="hero-bg"></div>
+  <canvas id="particles"></canvas>
   <div class="hero-content">
     <div class="hero-badge">⭐ Rated 9.9 · Bentota, Sri Lanka</div>
     <h1 class="hero-title"><em>Sisi's</em> Place</h1>
@@ -58,7 +61,7 @@
 <!-- ABOUT -->
 <section id="about">
   <div class="about-inner">
-    <div class="about-text reveal">
+    <div class="about-text reveal-left">
       <p class="section-label">Our Story</p>
       <h2 class="section-title">Where the Ocean <em>Meets</em> Family Warmth</h2>
       <p>Nestled right on the shores of Bentota Beach, Sisi's Place is a family-run boutique retreat that offers something rare — the genuine warmth of a home combined with the comfort of a top-rated hotel. Your host, Sisi, and his family treat every guest like a personal friend.</p>
@@ -82,7 +85,7 @@
         </div>
       </div>
     </div>
-    <div class="about-img-wrap reveal">
+    <div class="about-img-wrap reveal-right">
       <img class="about-img" src="images/about_hotel_1780752835645.png" alt="Hotel exterior">
       <div class="about-img-accent"></div>
       <div class="about-badge-img"><strong>🏖️</strong><span>Private Beach</span></div>
@@ -93,12 +96,12 @@
 <!-- ROOMS -->
 <section id="rooms">
   <div class="rooms-inner">
-    <div class="rooms-header reveal">
+    <div class="rooms-header reveal-up">
       <p class="section-label">Accommodation</p>
       <h2 class="section-title">Our <em>Rooms</em></h2>
     </div>
     <div class="rooms-grid">
-      <div class="room-card reveal">
+      <div class="room-card reveal-up">
         <div class="room-img">
           <img src="images/room_king_1780752849537.png" alt="King Sea View Room">
           <span class="room-badge">Most Popular</span>
@@ -118,7 +121,7 @@
           </div>
         </div>
       </div>
-      <div class="room-card reveal">
+      <div class="room-card reveal-up">
         <div class="room-img">
           <img src="images/room_garden_1780752868022.png" alt="Double Garden Room">
           <span class="room-badge">Great Value</span>
@@ -138,7 +141,7 @@
           </div>
         </div>
       </div>
-      <div class="room-card reveal">
+      <div class="room-card reveal-up">
         <div class="room-img">
           <img src="images/room_family_1780752880621.png" alt="Family Room">
         </div>
@@ -164,67 +167,67 @@
 <!-- AMENITIES -->
 <section id="amenities">
   <div class="amenities-inner">
-    <div class="amenities-header reveal">
+    <div class="amenities-header reveal-up">
       <p class="section-label">What We Offer</p>
       <h2 class="section-title">Hotel <em>Amenities</em></h2>
     </div>
     <div class="amenities-grid">
-      <div class="amenity-item reveal">
+      <div class="amenity-item reveal-up">
         <div class="amenity-icon">🏖️</div>
         <div class="amenity-name">Private Beach</div>
         <div class="amenity-desc">Exclusive beach access right at your doorstep</div>
       </div>
-      <div class="amenity-item reveal">
+      <div class="amenity-item reveal-up">
         <div class="amenity-icon">🌿</div>
         <div class="amenity-name">Garden Terrace</div>
         <div class="amenity-desc">Lush tropical garden for relaxation</div>
       </div>
-      <div class="amenity-item reveal">
+      <div class="amenity-item reveal-up">
         <div class="amenity-icon">📶</div>
         <div class="amenity-name">Free WiFi</div>
         <div class="amenity-desc">High-speed internet throughout property</div>
       </div>
-      <div class="amenity-item reveal">
+      <div class="amenity-item reveal-up">
         <div class="amenity-icon">🚗</div>
         <div class="amenity-name">Airport Transfer</div>
         <div class="amenity-desc">Hassle-free pickup from Colombo airport</div>
       </div>
-      <div class="amenity-item reveal">
+      <div class="amenity-item reveal-up">
         <div class="amenity-icon">🛎️</div>
         <div class="amenity-name">24h Front Desk</div>
         <div class="amenity-desc">Always here when you need us</div>
       </div>
-      <div class="amenity-item reveal">
+      <div class="amenity-item reveal-up">
         <div class="amenity-icon">🍳</div>
         <div class="amenity-name">Breakfast Included</div>
         <div class="amenity-desc">Fresh tropical breakfast every morning</div>
       </div>
-      <div class="amenity-item reveal">
+      <div class="amenity-item reveal-up">
         <div class="amenity-icon">🚲</div>
         <div class="amenity-name">Bike Rental</div>
         <div class="amenity-desc">Explore Bentota on two wheels</div>
       </div>
-      <div class="amenity-item reveal">
+      <div class="amenity-item reveal-up">
         <div class="amenity-icon">🛺</div>
         <div class="amenity-name">Tuk-Tuk Tours</div>
         <div class="amenity-desc">Sisi takes you on local adventures</div>
       </div>
-      <div class="amenity-item reveal">
+      <div class="amenity-item reveal-up">
         <div class="amenity-icon">🌊</div>
         <div class="amenity-name">Snorkelling</div>
         <div class="amenity-desc">Discover Bentota's underwater world</div>
       </div>
-      <div class="amenity-item reveal">
+      <div class="amenity-item reveal-up">
         <div class="amenity-icon">🍽️</div>
         <div class="amenity-name">Room Service</div>
         <div class="amenity-desc">Meals delivered to your room</div>
       </div>
-      <div class="amenity-item reveal">
+      <div class="amenity-item reveal-up">
         <div class="amenity-icon">❄️</div>
         <div class="amenity-name">Air Conditioning</div>
         <div class="amenity-desc">All rooms fully air-conditioned</div>
       </div>
-      <div class="amenity-item reveal">
+      <div class="amenity-item reveal-up">
         <div class="amenity-icon">🧳</div>
         <div class="amenity-name">Luggage Storage</div>
         <div class="amenity-desc">Secure storage for early/late stays</div>
@@ -236,7 +239,7 @@
 <!-- GALLERY -->
 <section id="gallery">
   <div class="gallery-inner">
-    <div class="gallery-header reveal">
+    <div class="gallery-header reveal-up">
       <p class="section-label" style="color:var(--gold)">Visual Journey</p>
       <h2 class="section-title">Gallery</h2>
     </div>
@@ -276,7 +279,7 @@
 <!-- DINING -->
 <section id="dining">
   <div class="dining-inner">
-    <div class="dining-img-wrap reveal">
+    <div class="dining-img-wrap reveal-left">
       <img class="dining-img" src="images/dining_breakfast_1780752952332.png" alt="Breakfast spread">
       <div class="dining-card">
         <div class="dining-card-icon">☀️</div>
@@ -284,7 +287,7 @@
         <div class="dining-card-sub">Included with every stay</div>
       </div>
     </div>
-    <div class="dining-text reveal">
+    <div class="dining-text reveal-right">
       <p class="section-label">Food & Drink</p>
       <h2 class="section-title">A Taste of <em>Sri Lanka</em></h2>
       <div class="menu-item">
@@ -329,7 +332,7 @@
 <!-- REVIEWS -->
 <section id="reviews">
   <div class="reviews-inner">
-    <div class="reviews-header reveal">
+    <div class="reviews-header reveal-up">
       <p class="section-label">Guest Voices</p>
       <h2 class="section-title">What Our <em>Guests</em> Say</h2>
       <div class="rating-display">
@@ -341,21 +344,21 @@
       </div>
     </div>
     <div class="reviews-grid">
-      <div class="review-card reveal">
+      <div class="review-card reveal-up">
         <div class="review-quote">"</div>
         <div class="review-stars">★★★★★</div>
         <p class="review-text">We extended our stay from 2 nights to 6 nights. Sisi took us around in his tuk-tuk, arranged trips — nothing was too much trouble. Breakfast was unbelievable every single morning.</p>
         <div class="review-author">Sarah & James</div>
         <div class="review-origin">🇬🇧 United Kingdom</div>
       </div>
-      <div class="review-card reveal">
+      <div class="review-card reveal-up">
         <div class="review-quote">"</div>
         <div class="review-stars">★★★★★</div>
         <p class="review-text">The rooms were super clean and spacious. The beach is right in front and a railway track next to the property — perfect location! Hospitality was outstanding, breakfast was delicious.</p>
         <div class="review-author">Priya & Raj</div>
         <div class="review-origin">🇮🇳 India</div>
       </div>
-      <div class="review-card reveal">
+      <div class="review-card reveal-up">
         <div class="review-quote">"</div>
         <div class="review-stars">★★★★★</div>
         <p class="review-text">A superb place! The family is incredibly welcoming. The shower was the best I had in all of Sri Lanka. Very clean, spacious room and an exceptional breakfast each day.</p>
@@ -369,7 +372,7 @@
 <!-- LOCATION -->
 <section id="location">
   <div class="location-inner">
-    <div class="location-text reveal">
+    <div class="location-text reveal-left">
       <p class="section-label">Find Us</p>
       <h2 class="section-title">Prime <em>Bentota</em> Location</h2>
       <p>Sisi's Place sits at the perfect spot where the Indian Ocean meets the golden sands of Bentota Beach. We're easily reachable and perfectly positioned for exploring southern Sri Lanka.</p>
@@ -382,7 +385,7 @@
         <li><span class="icon">✈️</span><div><strong>Bandaranaike Airport</strong> — ~90 min drive</div></li>
       </ul>
     </div>
-    <a class="map-placeholder reveal" href="https://maps.app.goo.gl/Jk33K73JJEqZggLM7" target="_blank">
+    <a class="map-placeholder reveal-right" href="https://maps.app.goo.gl/Jk33K73JJEqZggLM7" target="_blank">
       <div class="map-icon">📍</div>
       <strong>Sisi's Place, Bentota</strong>
       <p>6°25'16.6"N 79°59'49.0"E</p>
@@ -397,7 +400,7 @@
     <p class="section-label" style="text-align:center">Reserve Your Stay</p>
     <h2 class="section-title">Book <em>Direct</em> & Save</h2>
     <p>Get the best rates when you book directly with us. No hidden fees, free cancellation available.</p>
-    <div class="booking-form reveal">
+    <div class="booking-form reveal-up">
       <div class="form-row">
         <div class="form-group">
           <label>Check-in Date</label>
