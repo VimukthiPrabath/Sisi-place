@@ -45,6 +45,15 @@
     transition: width 0.2s, height 0.2s, background-color 0.2s;
   }
 
+  @media (pointer: coarse) {
+    body, a, button, select, input, .hamburger, .mobile-close, .lb-close, .lb-prev, .lb-next, .gallery-item, .map-placeholder {
+      cursor: auto !important;
+    }
+    .cursor-dot, .cursor-outline {
+      display: none !important;
+    }
+  }
+
   /* ── NAV ── */
   nav {
     position: fixed;
