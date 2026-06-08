@@ -100,52 +100,48 @@
   let mouseY = window.innerHeight / 2;
   let outlineX = mouseX;
   let outlineY = mouseY;
+  let isMobile = window.innerWidth <= 900 || ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
 
-  window.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    cursorDot.style.left = `${mouseX}px`;
-    cursorDot.style.top = `${mouseY}px`;
-  });
+  if (!isMobile) {
+    window.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      cursorDot.style.left = `${mouseX}px`;
+      cursorDot.style.top = `${mouseY}px`;
+    });
 
-  window.addEventListener('touchstart', (e) => {
-    if (e.touches.length > 0) {
-      mouseX = e.touches[0].clientX;
-      mouseY = e.touches[0].clientY;
+    function animateCursor() {
+      let distX = mouseX - outlineX;
+      let distY = mouseY - outlineY;
+      outlineX += distX * 0.15;
+      outlineY += distY * 0.15;
+      cursorOutline.style.left = `${outlineX}px`;
+      cursorOutline.style.top = `${outlineY}px`;
+      requestAnimationFrame(animateCursor);
     }
-  }, {passive: true});
+    animateCursor();
 
-  window.addEventListener('touchmove', (e) => {
-    if (e.touches.length > 0) {
-      mouseX = e.touches[0].clientX;
-      mouseY = e.touches[0].clientY;
-    }
-  }, {passive: true});
-
-  function animateCursor() {
-    let distX = mouseX - outlineX;
-    let distY = mouseY - outlineY;
-    outlineX += distX * 0.15;
-    outlineY += distY * 0.15;
-    cursorOutline.style.left = `${outlineX}px`;
-    cursorOutline.style.top = `${outlineY}px`;
-    requestAnimationFrame(animateCursor);
+    // Hover effects for cursor
+    document.querySelectorAll('a, button, select, input, .gallery-item, .map-placeholder').forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        if(cursorOutline) {
+          cursorOutline.style.width = '50px';
+          cursorOutline.style.height = '50px';
+          cursorOutline.style.backgroundColor = 'rgba(201,168,76,0.1)';
+        }
+      });
+      el.addEventListener('mouseleave', () => {
+        if(cursorOutline) {
+          cursorOutline.style.width = '36px';
+          cursorOutline.style.height = '36px';
+          cursorOutline.style.backgroundColor = 'transparent';
+        }
+      });
+    });
+  } else {
+    if(cursorDot) cursorDot.style.display = 'none';
+    if(cursorOutline) cursorOutline.style.display = 'none';
   }
-  animateCursor();
-
-  // Hover effects for cursor
-  document.querySelectorAll('a, button, select, input, .gallery-item, .map-placeholder').forEach(el => {
-    el.addEventListener('mouseenter', () => {
-      cursorOutline.style.width = '50px';
-      cursorOutline.style.height = '50px';
-      cursorOutline.style.backgroundColor = 'rgba(201,168,76,0.1)';
-    });
-    el.addEventListener('mouseleave', () => {
-      cursorOutline.style.width = '36px';
-      cursorOutline.style.height = '36px';
-      cursorOutline.style.backgroundColor = 'transparent';
-    });
-  });
 
   // CANVAS PARTICLES WITH MOUSE ATTRACTION
   const canvas = document.getElementById('particles');
@@ -184,7 +180,7 @@
         let maxDistance = 250;
         let force = (maxDistance - distance) / maxDistance;
 
-        if (distance < maxDistance) {
+        if (distance < maxDistance && typeof isMobile !== 'undefined' && !isMobile) {
           let forceDirectionX = dx / distance;
           let forceDirectionY = dy / distance;
           this.speedX += forceDirectionX * force * 0.08;
